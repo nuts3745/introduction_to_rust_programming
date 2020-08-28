@@ -8,4 +8,12 @@ fn main() {
             break count;
         }
     };
+
+    println!("{}", "");
+    let mut count = 0;
+
+    while count < 10 {
+        println!("count: {}", count);
+        count += 1;
+    }
 }
