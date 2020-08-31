@@ -1,9 +1,15 @@
 use std::thread;
 
 fn main() {
-    let handle = thread::spawn(|| {
-        println!("Hello, World!");
-    });
+    let mut handles = Vec::new();
 
-    dbg!(handle.join());
+    for x in 0..10 {
+        handles.push(thread::spawn(|| {
+            println!("Hello, world!: {}", x);
+        }));
+    }
+
+    for handle in handles {
+        let _ = handle.join();
+    }
 }
