@@ -1,0 +1,11 @@
+/home/nuts3745/rust_prac/Chapter3/async3/target/debug/deps/proc_macro2-14879255c1babc30.rmeta: /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/lib.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/parse.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/detection.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/fallback.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/wrapper.rs
+
+/home/nuts3745/rust_prac/Chapter3/async3/target/debug/deps/libproc_macro2-14879255c1babc30.rlib: /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/lib.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/parse.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/detection.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/fallback.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/wrapper.rs
+
+/home/nuts3745/rust_prac/Chapter3/async3/target/debug/deps/proc_macro2-14879255c1babc30.d: /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/lib.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/parse.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/detection.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/fallback.rs /home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/wrapper.rs
+
+/home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/lib.rs:
+/home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/parse.rs:
+/home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/detection.rs:
+/home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/fallback.rs:
+/home/nuts3745/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.19/src/wrapper.rs:
