@@ -1,9 +1,9 @@
 use std::thread;
-use std::rc::Rc;
+use std::sync::Arc;
 
 fn main() {
     let mut handles = Vec::new();
-    let mut data = Rc::new(vec![1; 10]);
+    let mut data = Arc::new(vec![1; 10]);
 
     for x in 0..10 {
         let data_ref = data.clone();
