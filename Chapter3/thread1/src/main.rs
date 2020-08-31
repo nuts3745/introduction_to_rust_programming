@@ -1,12 +1,14 @@
 use std::thread;
+use std::rc::Rc;
 
 fn main() {
     let mut handles = Vec::new();
-    let mut data = vec![1; 10];
+    let mut data = Rc::new(vec![1; 10]);
 
     for x in 0..10 {
+        let data_ref = data.clone();
         handles.push(thread::spawn(move || {
-            data[x] += 1;
+            data_ref[x] += 1;
         }));
     }
 
