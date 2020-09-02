@@ -1,1 +1,1 @@
-/home/nuts3745/rust_prac/Chapter3/match3/target/debug/match3: /home/nuts3745/rust_prac/Chapter3/match3/src/main.rs
+/Users/ks/introduction_to_rust_programming/Chapter3/match3/target/debug/match3.dSYM: /Users/ks/introduction_to_rust_programming/Chapter3/match3/src/main.rs
