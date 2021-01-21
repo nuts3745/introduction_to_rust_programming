@@ -18,6 +18,18 @@ struct Opts {
     formula_file: Option<String>,
 }
 
+struct RpnCalculator(bool);
+
+impl RpnCalculator {
+    pub fn new(verbose: bool) -> Self {
+        Self(verbose)
+    }
+
+    pub fn eval(&self, formula: &str) -> i32 {
+        0
+    }
+}
+
 fn main() {
     let opts = Opts::parse();
 
@@ -33,8 +45,11 @@ fn main() {
 }
 
 fn run<R: BufRead>(reader: R, verbose: bool) {
+    let calc = RpnCalculator::new(verbose);
+
     for line in reader.lines(){
         let line = line.unwrap();
-        println!("{}", line);
+        let answer = calc.eval(&line);
+        println!("{}", answer);
     }
 }
