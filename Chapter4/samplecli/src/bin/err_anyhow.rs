@@ -1,9 +1,15 @@
-use anyhow::{Context, Result};
+use anyhow::{bail, ensure, Context, Result};
 
 fn get_int_from_file() -> Result<i32> {
   let path = "number.txt";
   let num_str = std::fs::read_to_string(path)
     .with_context(|| format!("failed to read string from {}", path))?;
+
+  if num_str.len() >= 10 {
+    bail!("it may be too large number");
+  }
+
+  ensure!(num_str.starts_with("1"), "first digit is not 1");
 
   num_str
     .trim()
