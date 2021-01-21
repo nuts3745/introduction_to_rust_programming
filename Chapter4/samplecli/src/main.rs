@@ -26,6 +26,11 @@ impl RpnCalculator {
     }
 
     pub fn eval(&self, formula: &str) -> i32 {
+        let mut tokens = formula.split_whitespace().rev().collect::<Vec<_>>();
+        self.eval_inner(&mut tokens)
+    }
+
+    fn eval_inner(&self, tokens: &mut Vec<&str>) -> i32 {
         0
     }
 }
