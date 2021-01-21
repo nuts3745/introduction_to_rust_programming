@@ -1,4 +1,6 @@
 use clap::Clap;
+use std::fs::File;
+use std::io::{stdin, BufRead, BufReader};
 
 #[derive(Clap, Debug)]
 #[clap(
@@ -12,22 +14,27 @@ struct Opts {
     #[clap(short, long)]
     verbose: bool,
 
-    #[clap(name = "NUMBER")]
-    num: Option<i32>,
-
-    #[clap(name = "FILE", default_value = "default.txt")]
-    formula_file: String,
+    #[clap(name = "FILE")]
+    formula_file: Option<String>,
 }
 
 fn main() {
     let opts = Opts::parse();
 
-    match opts.num {
-        Some(num) => println!("Your number: {}", num),
-        None => println!("No number specified."),
+    if let Some(path) = opts.formula_file {
+        let f = File::open(path).unwrap();
+        let reader = BufReader::new(f);
+        run(reader, opts.verbose);
+    } else {
+        let stdin =  stdin();
+        let reader = stdin.lock();
+        run(reader, opts.verbose);
     }
+}
 
-     println!("File specified: {}", opts.formula_file);
-
-    println!("Is verbosity specified?: {}", opts.verbose);
+fn run<R: BufRead>(reader: R, verbose: bool) {
+    for line in reader.lines(){
+        let line = line.unwrap();
+        println!("{}", line);
+    }
 }
