@@ -5,28 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todo App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
 
 <body>
-  <div>
-    {% for entry in entries %}
-    <div>
-      <div>id: {{ entry.id }}, text: {{ entry.text }}</div>
-      <form action="/delete" method="POST">
-        <input type="hidden" name="id" value="{{ entry.id }}">
-        <button>delete</button>
+  <div class="section">
+    <div class="box">
+      <div class="label"> NewTask </div>
+      <form action="/add" method="POST">
+        <div class="container">
+          <input class="input is-rounded" name="text" placeholder="What do you want to do?">
+        </div>
+        <div class="block"></div>
+        <button class="button">add</button>
       </form>
+    </div>
+    {% for entry in entries %}
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">No.{{ entry.id }}</p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          {{ entry.text }}
+        </div>
+        <form action="/delete" method="POST">
+          <input type="hidden" name="id" value="{{ entry.id }}">
+          <button class="button">delete</button>
+        </form>
+      </div>
     </div>
     {% endfor %}
   </div>
-  <form action="/add" method="POST">
-    <div>
-      <input name="text">
-    </div>
-    <div>
-      <button>add</button>
-    </div>
-  </form>
 </body>
 
 </html>
